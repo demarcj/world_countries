@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/world_countries_quiz/static/css/main.99c16fef.chunk.css",
-    "main.js": "/world_countries_quiz/static/js/main.55a34316.chunk.js",
-    "main.js.map": "/world_countries_quiz/static/js/main.55a34316.chunk.js.map",
-    "runtime-main.js": "/world_countries_quiz/static/js/runtime-main.8d4f5f50.js",
-    "runtime-main.js.map": "/world_countries_quiz/static/js/runtime-main.8d4f5f50.js.map",
-    "static/js/2.ea9d1d3d.chunk.js": "/world_countries_quiz/static/js/2.ea9d1d3d.chunk.js",
-    "static/js/2.ea9d1d3d.chunk.js.map": "/world_countries_quiz/static/js/2.ea9d1d3d.chunk.js.map",
-    "static/js/3.d68e032c.chunk.js": "/world_countries_quiz/static/js/3.d68e032c.chunk.js",
-    "static/js/3.d68e032c.chunk.js.map": "/world_countries_quiz/static/js/3.d68e032c.chunk.js.map",
+    "main.css": "/world_countries_quiz/static/css/main.2a91cb4a.chunk.css",
+    "main.js": "/world_countries_quiz/static/js/main.4e29b468.chunk.js",
+    "main.js.map": "/world_countries_quiz/static/js/main.4e29b468.chunk.js.map",
+    "runtime-main.js": "/world_countries_quiz/static/js/runtime-main.b7695d2d.js",
+    "runtime-main.js.map": "/world_countries_quiz/static/js/runtime-main.b7695d2d.js.map",
+    "static/js/2.bce0184b.chunk.js": "/world_countries_quiz/static/js/2.bce0184b.chunk.js",
+    "static/js/2.bce0184b.chunk.js.map": "/world_countries_quiz/static/js/2.bce0184b.chunk.js.map",
+    "static/js/3.533222de.chunk.js": "/world_countries_quiz/static/js/3.533222de.chunk.js",
+    "static/js/3.533222de.chunk.js.map": "/world_countries_quiz/static/js/3.533222de.chunk.js.map",
     "index.html": "/world_countries_quiz/index.html",
-    "static/css/main.99c16fef.chunk.css.map": "/world_countries_quiz/static/css/main.99c16fef.chunk.css.map",
-    "static/js/2.ea9d1d3d.chunk.js.LICENSE.txt": "/world_countries_quiz/static/js/2.ea9d1d3d.chunk.js.LICENSE.txt"
+    "static/css/main.2a91cb4a.chunk.css.map": "/world_countries_quiz/static/css/main.2a91cb4a.chunk.css.map",
+    "static/js/2.bce0184b.chunk.js.LICENSE.txt": "/world_countries_quiz/static/js/2.bce0184b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.8d4f5f50.js",
-    "static/js/2.ea9d1d3d.chunk.js",
-    "static/css/main.99c16fef.chunk.css",
-    "static/js/main.55a34316.chunk.js"
+    "static/js/runtime-main.b7695d2d.js",
+    "static/js/2.bce0184b.chunk.js",
+    "static/css/main.2a91cb4a.chunk.css",
+    "static/js/main.4e29b468.chunk.js"
   ]
 }
