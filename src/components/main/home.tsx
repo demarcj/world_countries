@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 interface T{
   search_handler:(e: any) => void,
-  option_handler:(str: string) => void,
+  option_handler:(e: any) => void,
   flags: string[],
   continents: string[]
 }
@@ -26,12 +26,12 @@ export const Home: React.FC <T> = props => (
           name="continents" 
           id="continents"
           className="continents"
+          onChange={props.option_handler}
         >
           {props.continents.map((continent, i) => (
             <option 
               key={i} 
-              value={continent}
-              onClick={() => props.option_handler(continent)}
+              value={continent}              
               className="continent"
             >
               {continent}

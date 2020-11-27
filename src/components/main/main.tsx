@@ -48,9 +48,10 @@ export const Main: React.FC = () => {
     set_flags(filter_handler(option, val));
   };
 
-  const option_handler = (str: string) => { 
-    set_option(str);
-    set_flags(filter_handler(str, search));
+  const option_handler = (e: any) => { 
+    const val = e.target.value;
+    set_option(val);
+    set_flags(filter_handler(val, search));
   }
 
   const back_handler = () => {

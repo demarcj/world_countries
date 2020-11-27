@@ -14,7 +14,7 @@ https://demarcj.github.io/world_countries/
 
 ## To-Do-List & what to expect next
 - [ ] Create a Light Mode option for the app. I'd created the site in a dark mode design because I like dark mode better :P 
-- [ ] The fix the issue where the dropdown doesn't function on mobile devices
+- [x] The fix the issue where the dropdown doesn't function on mobile devices
 - [ ] Make a quiz feature
 - [ ] Add a login option
 - [ ] Add a favorite countries option
