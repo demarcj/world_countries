@@ -1,10 +1,11 @@
 import React from "react";
+import moment from "moment";
 
 
 export const Footer: React.FC = () => (
   <footer>
     <div className="container">
-      <p>DeMarc Johnson &copy; 2020</p>
+      <p>&copy; {moment().year()} DeMarc Johnson</p>
     </div>
   </footer>
 );

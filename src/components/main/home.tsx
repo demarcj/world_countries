@@ -32,6 +32,7 @@ export const Home: React.FC <T> = props => (
               key={i} 
               value={continent}
               onClick={() => props.option_handler(continent)}
+              className="continent"
             >
               {continent}
             </option>

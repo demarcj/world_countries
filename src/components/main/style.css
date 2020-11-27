@@ -33,6 +33,10 @@
 	width: 400px;
 }
 
+.continent{
+	cursor: pointer;
+}
+
 .flag_container {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -104,6 +108,20 @@
 	.flag_container {
 		grid-template-columns: 1fr 1fr;
 	}
+
+	.detail_page_content{
+		grid-template-columns: 1fr;
+	}
+
+	.filter_container{
+		display: block;
+		width: 100%;
+	}
+
+	.continents_container{
+		text-align: left;
+	}
+
 	.search {
 		width: 100%;
 	}
