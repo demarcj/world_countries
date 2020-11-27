@@ -5,7 +5,7 @@ interface T{
   search_handler:(e: any) => void,
   option_handler:(str: string) => void,
   flags: string[],
-  continents: string[],
+  continents: string[]
 }
 
 export const Home: React.FC <T> = props => (
