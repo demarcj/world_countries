@@ -69,16 +69,8 @@ export const Main: React.FC = () => {
           <Route path="/login">
             <Login />
           </Route>   
-          <Route path="/world_countries">
-            <Home  
-              flags={flags}
-              search_handler={search_handler}
-              option_handler={option_handler}
-              continents={continents}
-            />
-          </Route>                  
           {flags.map((flag: any, i:number) => (
-            <Route key={"route_" + i} path={"/" + flag.alpha3Code}>
+            <Route key={"route_" + i} path={"/world_countries/" + flag.alpha3Code}>
               <Detail 
                 flag={flag}
                 abbrev={abbrev}
@@ -86,7 +78,15 @@ export const Main: React.FC = () => {
               />
             </Route >
             )
-          )}            
+          )}  
+          <Route path="/world_countries">
+            <Home  
+              flags={flags}
+              search_handler={search_handler}
+              option_handler={option_handler}
+              continents={continents}
+            />
+          </Route>                                      
         </Switch>
       </div>
     </main>

@@ -21,7 +21,7 @@ export const Detail: React.FC <T> = props => {
         to="/world_countries"
         onClick={props.back_handler}
       >
-        &lt; Back
+        &lt; Back to Homepage
       </Link>
       <div className="detail_page_content">
         <div className="detail_page_container detail_image_container">
@@ -41,7 +41,7 @@ export const Detail: React.FC <T> = props => {
             <p className="flag_detail languages">Languages: {flag.languages.map((lang:any, i:number) => lang.name + (lang_length === (i + 1) ? "" : ", "))}</p>
           </div>
           <p className="flag_detail border_header">Bordering Countries: {flag.borders.length === 0 ? "None" : ""}</p>
-          {abbrev_list.map((abbrev:any, i:number) => flag.borders.includes(abbrev.abbrev) ? <Link className="border block_text" to={"/" + abbrev.abbrev} key={"border_" + i}>{abbrev.name}</Link> : "")}
+          {abbrev_list.map((abbrev:any, i:number) => flag.borders.includes(abbrev.abbrev) ? <Link className="border block_text" to={"/world_countries/" + abbrev.abbrev} key={"border_" + i}>{abbrev.name}</Link> : "")}
         </div>
       </div>
     </section>

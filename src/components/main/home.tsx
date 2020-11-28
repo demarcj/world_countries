@@ -42,7 +42,7 @@ export const Home: React.FC <T> = props => (
     </section>
     <section className="flag_container">
       {props.flags.map((flag:any, i:any) => (
-          <NavLink to={"/" + flag.alpha3Code} key={"flag_" + i} className="flag_item">
+          <NavLink to={"/world_countries/" + flag.alpha3Code} key={"flag_" + i} className="flag_item">
             <img src={flag.flag} className="flag_image" alt={"The flag of " + flag.name} /> 
             <div className="flag_content">
               <p className="country">{flag.name}</p>
