@@ -167,6 +167,12 @@
 	.search {
 		width: 100%;
 	}
+
+	.border {
+		display: block;
+		text-align: center;
+		margin-right: 0;
+	}
 }
 
 @media screen and (max-width:468px) {

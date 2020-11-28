@@ -41,7 +41,7 @@ export const Detail: React.FC <T> = props => {
             <p className="flag_detail languages">Languages: {flag.languages.map((lang:any, i:number) => lang.name + (lang_length === (i + 1) ? "" : ", "))}</p>
           </div>
           <p className="flag_detail border_header">Bordering Countries: {flag.borders.length === 0 ? "None" : ""}</p>
-          {abbrev_list.map((abbrev:any, i:number) => flag.borders.includes(abbrev.abbrev) ? <p className="border block_text" key={"border_" + i}>{abbrev.name}</p> : "")}
+          {abbrev_list.map((abbrev:any, i:number) => flag.borders.includes(abbrev.abbrev) ? <Link className="border block_text" to={"/" + abbrev.abbrev} key={"border_" + i}>{abbrev.name}</Link> : "")}
         </div>
       </div>
     </section>

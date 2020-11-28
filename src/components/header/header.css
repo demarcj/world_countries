@@ -1,3 +1,17 @@
+.header{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.right_header{
+  text-align: right;
+}
+
+.color_mode{
+  cursor: pointer;
+  display: inline-block;
+}
+
 .nav_item{
   display: inline-block;
 }

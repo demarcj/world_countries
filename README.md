@@ -2,7 +2,7 @@
 
 You can get the stats of all the world's country
 
-## Version 0.3.0
+## Version 0.3.2
 
 Can filter the country list by either or both text and by dropdown
 
@@ -18,7 +18,8 @@ https://demarcj.github.io/world_countries/
 - [ ] Make a quiz feature
 - [ ] Add a login option
 - [ ] Add a favorite countries option
-- [ ] Add social / contact links section in the footer
+- [x] Add social / contact links section in the footer
+- [ ] Add Redux
 
 ## Technology used
 * React
