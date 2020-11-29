@@ -2,11 +2,27 @@ import React from "react";
 import { Nav } from "./index";
 import "./header.css";
 
-export const Header: React.FC = () => (
-  <header>
-    <div className="header container">  
-      {window.location.hostname === "localhost" ? <Nav /> : ""}
-      {window.location.hostname === "localhost" ? <div className="right_header"><p className="color_mode">Light Mode</p></div>: ""}
-    </div>
-  </header>
-);
+interface T{
+  color_mode: string,
+  color_mode_handler: () => void
+}
+
+export const Header: React.FC<T> = props => {
+  const {color_mode, color_mode_handler} = props;
+  
+  return(
+    <header>
+      <div className="header container">  
+        {window.location.hostname === "localhost" ? <Nav /> : ""}
+        <div className="right_header">
+          <p 
+            className="color_mode"
+            onClick={color_mode_handler}
+          >
+            {color_mode.replaceAll("_", " ")}
+          </p>
+        </div>
+      </div>
+    </header>
+  );
+};

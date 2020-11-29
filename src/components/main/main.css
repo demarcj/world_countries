@@ -1,5 +1,5 @@
 .header_main{
-	color: white;
+	color:var(--font_color);
 	margin-bottom: 30px;
 }
 
@@ -15,13 +15,14 @@
 
 .search {
 	background: var(--background_color);
-	color: white;
+	color:var(--font_color);
 	border: none;
 	padding: 15px;
 	font-size: 18px;
 	border-radius: 3px;
 	margin-bottom: 15px;
 	width: 75%;
+	box-shadow:var(--item_shadow);
 }
 
 .continents_container{
@@ -33,9 +34,10 @@
 	font-size: 18px;
 	background: var(--background_color);
 	border: none;
-	color: white;
+	color:var(--font_color);
 	max-width: 100%;
 	width: 400px;
+	box-shadow:var(--item_shadow);
 }
 
 .continent{
@@ -53,6 +55,7 @@
 	border-radius: 5px;
 	cursor: pointer;
 	text-decoration: none;
+	box-shadow:var(--item_shadow);
 }
 
 .flag_image{
@@ -85,7 +88,7 @@
 	padding: 15px;
 	display: inline-block;
 	margin-bottom: 45px;
-	box-shadow:0px 0px 8px 6px rgba(20, 20, 20, 0.4);
+	box-shadow:var(--item_shadow);
 	margin-right: 30px;
 }
 

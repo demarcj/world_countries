@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { Home, Detail, Quiz, Login } from "./";
-import { Nav } from "../header";
 import "./main.css";
 
 export const Main: React.FC = () => {
