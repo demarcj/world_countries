@@ -17,7 +17,7 @@
 }
 
 .nav_links{
-  color: white;
+  color: var(--font_color);
   text-decoration: none;
   font-weight: 700;
   margin: 0 10px;

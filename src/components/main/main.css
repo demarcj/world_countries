@@ -78,7 +78,7 @@
 
 .block_text{
 	background:var(--background_color);
-	color:white;
+	color:var(--font_color);
 	text-decoration: none;
 	font-weight: 700;
 	font-size: 18px;

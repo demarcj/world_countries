@@ -8,9 +8,11 @@ import { BrowserRouter } from "react-router-dom";
 const App = () => {
   return (
     <BrowserRouter>
-      <Header />
-      <Main />
-      <Footer />
+      <div id="color_mode" className="light_mode">
+        <Header />
+        <Main />
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }
