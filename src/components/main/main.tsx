@@ -8,7 +8,7 @@ export const Main: React.FC = () => {
   const [const_flags, set_const_flags] = useState([]);
   const [option, set_option] = useState("");
   const [search, set_search] = useState("");
-  const [abbrev, set_abbrev] = useState([{}]);
+  const [abbrev_list, set_abbrev] = useState([{}]);
 
   const continents = [`Filter by Region`, `Americas`, `Africa`, `Asia`, `Europe`, `Oceania`, `Polar`];
 
@@ -72,7 +72,7 @@ export const Main: React.FC = () => {
             <Route key={"route_" + i} path={"/world_countries/" + flag.alpha3Code}>
               <Detail 
                 flag={flag}
-                abbrev={abbrev}
+                abbrev_list={abbrev_list}
                 back_handler={back_handler}
               />
             </Route >

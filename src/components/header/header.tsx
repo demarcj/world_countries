@@ -9,11 +9,11 @@ interface T{
 
 export const Header: React.FC<T> = props => {
   const {color_mode, color_mode_handler} = props;
-  
+
   return(
     <header>
       <div className="header container">  
-        {window.location.hostname === "localhost" ? <Nav /> : ""}
+        {window.location.hostname === "localhost" ? <Nav /> : <nav></nav>}
         <div className="right_header">
           <p 
             className="color_mode"

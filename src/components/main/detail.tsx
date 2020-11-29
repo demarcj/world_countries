@@ -3,23 +3,22 @@ import { Link } from "react-router-dom";
 
 interface T{
   flag: any,
-  abbrev: any,
+  abbrev_list: any,
   back_handler: () => void
 }
 
 export const Detail: React.FC <T> = props => {
-  const flag = props.flag;
+  const { flag, abbrev_list, back_handler } = props;
   const domain_length = flag.topLevelDomain.length;
   const currency_length = flag.currencies.length;
   const lang_length = flag.languages.length;
-  const abbrev_list = props.abbrev;
 
   return (
     <section className="detail_page">
       <Link 
         className="back_link block_text" 
         to="/world_countries"
-        onClick={props.back_handler}
+        onClick={back_handler}
       >
         &lt; Back to Homepage
       </Link>
