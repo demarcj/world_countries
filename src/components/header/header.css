@@ -23,3 +23,11 @@
   margin: 0 10px;
   font-size: 22px;
 }
+
+.nav_item:first-of-type>.nav_links{
+  margin-left: 0;
+}
+
+.nav_links.active{
+  color:var(--active_link);
+}

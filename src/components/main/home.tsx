@@ -2,8 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 interface T{
-  search_handler:(e: any) => void,
-  option_handler:(e: any) => void,
+  search_handler:(e: string) => void,
+  option_handler:(e: string) => void,
   flags: string[],
   continents: string[]
 }
@@ -17,11 +17,11 @@ export const Home: React.FC <T> = props => {
         <div className="search_container filter_container">
           <input 
             type="search" 
-            name="search" 
+            name="search"
             id="search" 
             className="search"
             placeholder="Search for a country..."
-            onKeyUp={search_handler}
+            onChange={e => search_handler(e.target.value.toLowerCase())}
           />
         </div>
         <div className="continents_container filter_container">
@@ -29,7 +29,7 @@ export const Home: React.FC <T> = props => {
             name="continents" 
             id="continents"
             className="continents"
-            onChange={option_handler}
+            onChange={e => option_handler(e.target.value)}
           >
             {continents.map((continent, i) => (
               <option 
@@ -45,7 +45,7 @@ export const Home: React.FC <T> = props => {
       </section>
       <section className="flag_container">
         {flags.map((flag:any, i:any) => (
-            <NavLink to={"/world_countries/" + flag.alpha3Code} key={"flag_" + i} className="flag_item">
+            <NavLink to={"/world_countries/world_countries/" + flag.alpha3Code} key={"flag_" + i} className="flag_item">
               <img src={flag.flag} className="flag_image" alt={"The flag of " + flag.name} /> 
               <div className="flag_content">
                 <p className="country">{flag.name}</p>

@@ -3,3 +3,4 @@ export { Home } from "./home";
 export { Detail } from "./detail";
 export { Quiz } from "./quiz";
 export { Login } from "./login";
+export { NotFound } from "./not_found";

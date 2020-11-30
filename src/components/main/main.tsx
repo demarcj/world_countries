@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Route, Switch } from "react-router-dom";
-import { Home, Detail, Quiz, Login } from "./";
+import { Redirect, Route, Switch } from "react-router-dom";
+import { Home, Detail, Quiz, Login, NotFound } from "./";
 import "./main.css";
 
 export const Main: React.FC = () => {
@@ -41,16 +41,14 @@ export const Main: React.FC = () => {
     );
   };
 
-  const search_handler = (e: any) => {
-    const val = e.target.value.toLowerCase();
-    set_search(val);
-    set_flags(filter_handler(option, val));
+  const search_handler = (search_val: string) => {
+    set_search(search_val);
+    set_flags(filter_handler(option, search_val));
   };
 
-  const option_handler = (e: any) => { 
-    const val = e.target.value;
-    set_option(val);
-    set_flags(filter_handler(val, search));
+  const option_handler = (option_val: string) => { 
+    set_option(option_val);
+    set_flags(filter_handler(option_val, search));
   }
 
   const back_handler = () => {
@@ -58,36 +56,38 @@ export const Main: React.FC = () => {
   }
 
   return(
-    <main>
-      <div className="container"> 
-        <h1 className="header_main">Where in the world?</h1>
-        <Switch>    
-          <Route path="/quiz">
-            <Quiz />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>   
-          {flags.map((flag: any, i:number) => (
-            <Route key={"route_" + i} path={"/world_countries/" + flag.alpha3Code}>
-              <Detail 
-                flag={flag}
-                abbrev_list={abbrev_list}
-                back_handler={back_handler}
+      <main>
+        <div className="container"> 
+          <h1 className="header_main">Where in the world?</h1>
+          <Switch>    
+            <Route path="/world_countries/quiz">
+              <Quiz />
+            </Route>
+            <Route path="/world_countries/login">
+              <Login />
+            </Route>   
+            {flags.map((flag: any, i:number) => (
+              <Route key={"route_" + i} path={"/world_countries/world_countries/" + flag.alpha3Code}>
+                <Detail 
+                  flag={flag}
+                  abbrev_list={abbrev_list}
+                  back_handler={back_handler}
+                />
+              </Route >
+              )
+            )}  
+            <Route path="/world_countries/world_countries" >
+              <Home  
+                flags={flags}
+                search_handler={search_handler}
+                option_handler={option_handler}
+                continents={continents}
               />
-            </Route >
-            )
-          )}  
-          <Route path="/world_countries">
-            <Home  
-              flags={flags}
-              search_handler={search_handler}
-              option_handler={option_handler}
-              continents={continents}
-            />
-          </Route>                                      
-        </Switch>
-      </div>
-    </main>
+            </Route>      
+            <Redirect from="/world_countries" to="/world_countries/world_countries" />
+            <Route component={NotFound} />          
+          </Switch>
+        </div>
+      </main>
   );
 };
