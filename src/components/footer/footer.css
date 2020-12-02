@@ -16,3 +16,13 @@
 .social_links_container > a:last-of-type >.social_links:last-of-type{
   margin-right: 0;
 }
+
+@media screen and (max-width:991px) {
+  .footer{
+    grid-template-columns: 1fr;
+  }
+  .social_links_container{
+    text-align: left;
+    margin-top: 30px;
+  }
+}

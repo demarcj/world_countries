@@ -160,6 +160,7 @@
 	.detail_info_content{
 		display: block;
 		padding: 0;
+		width: 100%;
 	}
 
 	.filter_container{

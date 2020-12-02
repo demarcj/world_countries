@@ -1,9 +1,8 @@
-import React from "react";
 import moment from "moment";
 import "./footer.css"
 
 
-export const Footer: React.FC = () => (
+export const Footer = () => (
   <footer>
     <div className="footer container">
       <p className="copyright">&copy; {moment().year()} DeMarc Johnson</p>
