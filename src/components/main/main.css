@@ -46,7 +46,7 @@
 
 .flag_container {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(4, 1fr);
 	gap:30px
 }
 
@@ -104,7 +104,7 @@
 .detail_page_content{
 	font-size: 0;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(2, 1fr);
 	gap:45px
 }
 
@@ -140,13 +140,13 @@
 
 @media screen and (max-width:1600px) {
 	.flag_container {
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
 @media screen and (max-width:991px) {
 	.flag_container {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(2, 1fr);
 	}
 
 	.detail_page_container{

@@ -1,5 +1,7 @@
 export const inital_state = {
-  counter: 0
+  counter: 0,
+  search: "",
+  option: ""
 }
 
 export const reducer = (state: any = inital_state, action: any) => {

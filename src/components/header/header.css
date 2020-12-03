@@ -3,8 +3,10 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
-.right_header{
-  text-align: right;
+.mobile_menu{
+  color: var(--font_color);
+  font-size: 30px;
+  display: none;
 }
 
 .color_mode{
@@ -30,4 +32,17 @@
 
 .nav_links.active{
   color:var(--active_link);
+}
+
+.right_header{
+  text-align: right;
+}
+
+@media screen and (max-width:991px) {
+  .mobile_menu{
+    display: block;
+  }
+  .nav{
+    display: none;
+  }
 }

@@ -58,7 +58,7 @@ export const Main: React.FC = () => {
   return(
       <main>
         <div className="container"> 
-          <h1 className="header_main">Where in the world?</h1>
+          <h1 className="header_main">Learn the world's different countries and play game!</h1>
           <Switch>    
             <Route path="/world_countries/quiz">
               <Quiz />
