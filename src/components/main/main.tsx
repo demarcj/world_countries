@@ -58,7 +58,7 @@ export const Main: React.FC = () => {
   return(
       <main>
         <div className="container"> 
-          <h1 className="header_main">Learn the world's different countries and play game!</h1>
+          <h1 className="header_main">Learn about different countries and play game!</h1>
           <Switch>    
             <Route path="/world_countries/quiz">
               <Quiz />
@@ -67,7 +67,7 @@ export const Main: React.FC = () => {
               <Login />
             </Route>   
             {flags.map((flag: any, i:number) => (
-              <Route key={"route_" + i} path={"/world_countries/world_countries/" + flag.alpha3Code}>
+              <Route key={"route_" + i} path={"/world_countries/" + flag.alpha3Code}>
                 <Detail 
                   flag={flag}
                   abbrev_list={abbrev_list}
@@ -76,7 +76,7 @@ export const Main: React.FC = () => {
               </Route >
               )
             )}  
-            <Route path="/world_countries/world_countries" >
+            <Route path="/world_countries" >
               <Home  
                 flags={flags}
                 search_handler={search_handler}
@@ -84,7 +84,6 @@ export const Main: React.FC = () => {
                 continents={continents}
               />
             </Route>      
-            <Redirect from="/world_countries" to="/world_countries/world_countries" />
             <Route component={NotFound} />          
           </Switch>
         </div>

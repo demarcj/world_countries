@@ -41,11 +41,12 @@ export const Home: React.FC <T> = props => {
               </option>
             ))}
           </select>
+          <div className="select_arrow"></div>
         </div>
       </section>
       <section className="flag_container">
         {flags.map((flag:any, i:any) => (
-            <NavLink to={"/world_countries/world_countries/" + flag.alpha3Code} key={"flag_" + i} className="flag_item">
+            <NavLink to={"/world_countries/" + flag.alpha3Code} key={"flag_" + i} className="flag_item">
               <img src={flag.flag} className="flag_image" alt={"The flag of " + flag.name} /> 
               <div className="flag_content">
                 <p className="country">{flag.name}</p>

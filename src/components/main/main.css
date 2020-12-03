@@ -27,6 +27,8 @@
 
 .continents_container{
 	text-align: right;
+	max-width: 100%;
+	position: relative;
 }
 
 .continents {
@@ -38,10 +40,33 @@
 	max-width: 100%;
 	width: 400px;
 	box-shadow:var(--item_shadow);
+	cursor: pointer;
 }
 
 .continent{
 	cursor: pointer;
+}
+
+.select_arrow {
+	background-color: var(--background_color);
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	width: 30px;
+	top: 0;
+	pointer-events: none;
+}
+
+.select_arrow::after {
+	content:"\25BC";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 16px;
+	color:var(--font_color);
+	font-weight: 700;
+	right: 10px;
 }
 
 .flag_container {
@@ -166,6 +191,11 @@
 	.filter_container{
 		display: block;
 		width: 100%;
+	}
+
+	.filter_container.continents_container{
+		width: auto;
+		display: inline-block;
 	}
 
 	.continents_container{

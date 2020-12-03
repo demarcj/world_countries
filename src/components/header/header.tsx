@@ -15,6 +15,7 @@ export const Header: React.FC<T> = props => {
       <div className="header container">  
         {window.location.hostname === "localhost" ? <Nav /> : <nav></nav>}
         <div className="right_header">
+          <div className="mobile_menu">&#9776;</div>
           <p 
             className="color_mode"
             onClick={color_mode_handler}
