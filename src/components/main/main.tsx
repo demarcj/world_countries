@@ -11,7 +11,7 @@ export const Main: React.FC = () => {
   const [abbrev_list, set_abbrev] = useState([{}]);
 
   const continents = [`Filter by Region`, `Americas`, `Africa`, `Asia`, `Europe`, `Oceania`, `Polar`];
-
+  console.log('see me');
   React.useEffect(() => {
     const get_flags = async () => {
       const fetch_flags = await fetch(`https://restcountries.eu/rest/v2/all`);
