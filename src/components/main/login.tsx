@@ -1,6 +1,4 @@
 export const Login = () => (
-  <section className="login">
-    Login
-  </section>
+  <section className="login"> </section>
 )
 

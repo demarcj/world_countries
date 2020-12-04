@@ -17,7 +17,7 @@ export const Detail: React.FC <T> = props => {
     <section className="detail_page">
       <Link 
         className="back_link block_text" 
-        to="/world_countries"
+        to="/"
         onClick={back_handler}
       >
         &lt; Back to Homepage

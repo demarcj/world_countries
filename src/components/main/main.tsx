@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
-import { Home, Detail, Quiz, Login, NotFound } from "./";
+import { Route, Switch, Redirect } from "react-router-dom";
+// import { useSelector, useDispatch, shallowEqual } from "react-redux";
+import { Home, Detail, Quiz, Login, MainContainer } from "./";
 import "./main.css";
 
 export const Main: React.FC = () => {
@@ -11,7 +12,7 @@ export const Main: React.FC = () => {
   const [abbrev_list, set_abbrev] = useState([{}]);
 
   const continents = [`Filter by Region`, `Americas`, `Africa`, `Asia`, `Europe`, `Oceania`, `Polar`];
-  console.log('see me');
+
   React.useEffect(() => {
     const get_flags = async () => {
       const fetch_flags = await fetch(`https://restcountries.eu/rest/v2/all`);
@@ -56,37 +57,47 @@ export const Main: React.FC = () => {
   }
 
   return(
-      <main>
-        <div className="container"> 
-          <h1 className="header_main">Learn about different countries and play game!</h1>
-          <Switch>    
-            <Route path="/world_countries/quiz">
-              <Quiz />
-            </Route>
-            <Route path="/world_countries/login">
-              <Login />
-            </Route>   
-            {flags.map((flag: any, i:number) => (
-              <Route key={"route_" + i} path={"/world_countries/" + flag.alpha3Code}>
-                <Detail 
-                  flag={flag}
-                  abbrev_list={abbrev_list}
-                  back_handler={back_handler}
-                />
-              </Route >
-              )
-            )}  
-            <Route path="/world_countries" >
-              <Home  
-                flags={flags}
-                search_handler={search_handler}
-                option_handler={option_handler}
-                continents={continents}
+    <main>
+      <Switch>    
+        <Route path="/quiz">
+          <MainContainer header={"It's game time"} >
+            <Quiz />
+          </MainContainer>
+        </Route>
+        <Route path="/login">
+          <MainContainer header={"Login"} >
+            <Login />
+          </MainContainer>
+        </Route>           
+        {flags.map((flag: any, i:number) => (
+          <Route key={"route_" + i} path={"/world_countries/" + flag.alpha3Code}>
+            <MainContainer header={flag.name} >
+              <Detail 
+                flag={flag}
+                abbrev_list={abbrev_list}
+                back_handler={back_handler}
               />
-            </Route>      
-            <Route component={NotFound} />          
-          </Switch>
-        </div>
-      </main>
+            </MainContainer>
+          </Route >
+          )
+        )}  
+        <Route path="/world_countries" >
+          <Redirect from="/world_countries" to="/" />
+        </Route>
+        <Route path="/" exact>
+          <MainContainer header={"Learn about different countries"} > 
+            <Home  
+              flags={flags}
+              search_handler={search_handler}
+              option_handler={option_handler}
+              continents={continents}
+            />
+          </MainContainer>
+        </Route>
+        <Route >
+          <MainContainer header={"Page Not Found"} />
+        </Route>         
+      </Switch>
+    </main>
   );
 };

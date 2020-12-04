@@ -159,10 +159,6 @@
 	width: 100%;
 }
 
-.not_found{
-	color: var(--font_color);
-}
-
 @media screen and (max-width:1600px) {
 	.flag_container {
 		grid-template-columns: repeat(3, 1fr);
