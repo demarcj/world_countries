@@ -2,7 +2,7 @@
 
 You can get the stats of all the world's country
 
-## Version 0.4.6
+## Version 0.4.7
 
 Can filter the country list by either or both text and by dropdown
 

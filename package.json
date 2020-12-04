@@ -1,6 +1,6 @@
 {
   "name": "world_countries",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "private": true,
   "homepage": "https://demarcj.github.io/world_countries/",
   "dependencies": {
