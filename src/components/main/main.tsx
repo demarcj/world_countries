@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect, Link } from "react-router-dom";
 // import { useSelector, useDispatch, shallowEqual } from "react-redux";
 import { Home, Detail, Quiz, Login, MainContainer } from "./";
 import "./main.css";
@@ -95,7 +95,15 @@ export const Main: React.FC = () => {
           </MainContainer>
         </Route>
         <Route >
-          <MainContainer header={"Page Not Found"} />
+          <MainContainer header={"Page Not Found"}>
+            <Link 
+              className="back_link block_text" 
+              to="/"
+              onClick={back_handler}
+            >
+              &lt; Back to Homepage
+            </Link>
+          </MainContainer>
         </Route>         
       </Switch>
     </main>
