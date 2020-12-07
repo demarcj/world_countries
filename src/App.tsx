@@ -3,7 +3,6 @@ import './App.css';
 import { Header } from "./components/header";
 import { Main } from "./components/main"
 import { Footer } from "./components/footer";
-import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
   const [color_mode, set_color_mode] = useState(localStorage.getItem("color_mode"));
@@ -15,19 +14,17 @@ const App = () => {
   };
 
   return (
-    <BrowserRouter>
-      <div 
-        id="color_mode" 
-        className={color_mode === "light_mode" ? "light_mode" : "dark_mode"}
-      >
-        <Header 
-          color_mode={color_mode === "light_mode" ? "Dark Mode" : "Light Mode"}
-          color_mode_handler={color_mode_handler}
-        />
-        <Main />
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <div 
+      id="color_mode" 
+      className={color_mode === "light_mode" ? "light_mode" : "dark_mode"}
+    >
+      <Header 
+        color_mode={color_mode === "light_mode" ? "Dark Mode" : "Light Mode"}
+        color_mode_handler={color_mode_handler}
+      />
+      <Main />
+      <Footer />
+    </div>
   );
 }
 

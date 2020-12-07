@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { MainContainer } from "./";
+import { Link } from "react-router-dom";
 
 interface T{
   search_handler:(e: string) => void,
@@ -12,7 +13,7 @@ export const Home: React.FC <T> = props => {
   const { search_handler, option_handler, flags, continents} = props;
 
   return (
-    <>
+    <MainContainer header={"Learn about different countries"} > 
       <section className="filter_section">
         <div className="search_container filter_container">
           <input 
@@ -46,7 +47,7 @@ export const Home: React.FC <T> = props => {
       </section>
       <section className="flag_container">
         {flags.map((flag:any, i:any) => (
-            <NavLink to={"/world_countries/" + flag.alpha3Code} key={"flag_" + i} className="flag_item">
+            <Link to={"/world_countries/" + flag.alpha3Code} key={"flag_" + i} className="flag_item">
               <img src={flag.flag} className="flag_image" alt={"The flag of " + flag.name} /> 
               <div className="flag_content">
                 <p className="country">{flag.name}</p>
@@ -56,10 +57,10 @@ export const Home: React.FC <T> = props => {
                   <p className="flag_detail capital">Capital: {flag.capital}</p>
                 </div>
               </div>
-            </NavLink>
+            </Link>
           )
         )}
       </section>
-    </>
+    </MainContainer > 
   )
 };

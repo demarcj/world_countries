@@ -1,4 +1,8 @@
+import { MainContainer } from "./";
+
 export const Login = () => (
-  <section className="login"> </section>
+  <MainContainer header="Login" >
+    <section className="login"> </section>
+  </MainContainer>
 )
 

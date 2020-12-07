@@ -1,11 +1,10 @@
-import moment from "moment";
+import time from "dayjs";
 import "./footer.css"
-
 
 export const Footer = () => (
   <footer>
     <div className="footer container">
-      <p className="copyright">&copy; {moment().year()} DeMarc Johnson</p>
+      <p className="copyright">&copy; {time().year()} DeMarc Johnson</p>
       <div className="social_links_container">
         <a href="https://github.com/demarcj">
           <svg className="social_links" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">

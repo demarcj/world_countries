@@ -1,15 +1,29 @@
 import React, { useState } from "react";
-import { Route, Switch, Redirect, Link } from "react-router-dom";
-// import { useSelector, useDispatch, shallowEqual } from "react-redux";
-import { Home, Detail, Quiz, Login, MainContainer } from "./";
+import { Route, Switch, Redirect } from "react-router-dom";
+import { useSelector, useDispatch, shallowEqual } from "react-redux";
+import { Home, Detail, Quiz, Login, NotFound } from "./";
+import * as actions from "../../store/actions";
 import "./main.css";
 
 export const Main: React.FC = () => {
-  const [flags, set_flags] = useState([]);
-  const [const_flags, set_const_flags] = useState([]);
-  const [option, set_option] = useState("");
-  const [search, set_search] = useState("");
-  const [abbrev_list, set_abbrev] = useState([{}]);
+  // const [flags, set_flags] = useState([]);
+  // const [const_flags, set_const_flags] = useState([]);
+  // const [option, set_option] = useState("");
+  // const [search, set_search] = useState("");
+  // const [abbrev_list, set_abbrev] = useState([{}]);
+
+  const flags = useSelector((state: any) => state.flags, shallowEqual);
+  const const_flags = useSelector((state: any) => state.const_flags, shallowEqual);
+  const option = useSelector((state: any) => state.option, shallowEqual);
+  const search = useSelector((state: any) => state.search, shallowEqual);
+  const abbrev_list = useSelector((state: any) => state.abbrev_list, shallowEqual); 
+
+  const dispatch = useDispatch();
+  const set_flags = (val: any) => dispatch(actions.set_flags(val));
+  const set_const_flags = (val: any) =>  dispatch(actions.set_const_flags(val));
+  const set_search = (val: any) => dispatch(actions.set_search(val));
+  const set_option = (val: any) => dispatch(actions.set_option(val));
+  const set_abbrev = (val: any) => dispatch(actions.set_abbrev(val));
 
   const continents = [`Filter by Region`, `Americas`, `Africa`, `Asia`, `Europe`, `Oceania`, `Polar`];
 
@@ -59,25 +73,15 @@ export const Main: React.FC = () => {
   return(
     <main>
       <Switch>    
-        <Route path="/quiz">
-          <MainContainer header={"It's game time"} >
-            <Quiz />
-          </MainContainer>
-        </Route>
-        <Route path="/login">
-          <MainContainer header={"Login"} >
-            <Login />
-          </MainContainer>
-        </Route>           
+        <Route path="/quiz" component={Quiz} />
+        <Route path="/login" component={Login} />          
         {flags.map((flag: any, i:number) => (
           <Route key={"route_" + i} path={"/world_countries/" + flag.alpha3Code}>
-            <MainContainer header={flag.name} >
-              <Detail 
-                flag={flag}
-                abbrev_list={abbrev_list}
-                back_handler={back_handler}
-              />
-            </MainContainer>
+            <Detail 
+              flag={flag}
+              abbrev_list={abbrev_list}
+              back_handler={back_handler}
+            />
           </Route >
           )
         )}  
@@ -85,25 +89,15 @@ export const Main: React.FC = () => {
           <Redirect from="/world_countries" to="/" />
         </Route>
         <Route path="/" exact>
-          <MainContainer header={"Learn about different countries"} > 
-            <Home  
-              flags={flags}
-              search_handler={search_handler}
-              option_handler={option_handler}
-              continents={continents}
-            />
-          </MainContainer>
+          <Home  
+            flags={flags}
+            search_handler={search_handler}
+            option_handler={option_handler}
+            continents={continents}
+          />
         </Route>
         <Route >
-          <MainContainer header={"Page Not Found"}>
-            <Link 
-              className="back_link block_text" 
-              to="/"
-              onClick={back_handler}
-            >
-              &lt; Back to Homepage
-            </Link>
-          </MainContainer>
+          <NotFound back_handler={back_handler} />
         </Route>         
       </Switch>
     </main>
