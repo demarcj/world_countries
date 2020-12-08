@@ -1,5 +1,5 @@
 import time from "dayjs";
-import "./footer.css"
+import "./footer.scss"
 
 export const Footer = () => (
   <footer>

@@ -1,16 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { useSelector, useDispatch, shallowEqual } from "react-redux";
 import { Home, Detail, Quiz, Login, NotFound } from "./";
 import * as actions from "../../store/actions";
-import "./main.css";
+import "./main.scss";
 
 export const Main: React.FC = () => {
-  // const [flags, set_flags] = useState([]);
-  // const [const_flags, set_const_flags] = useState([]);
-  // const [option, set_option] = useState("");
-  // const [search, set_search] = useState("");
-  // const [abbrev_list, set_abbrev] = useState([{}]);
 
   const flags = useSelector((state: any) => state.flags, shallowEqual);
   const const_flags = useSelector((state: any) => state.const_flags, shallowEqual);

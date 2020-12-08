@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav } from "./index";
-import "./header.css";
+import "./header.scss";
 
 interface T{
   color_mode: string,
