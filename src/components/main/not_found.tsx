@@ -1,12 +1,9 @@
 import React from "react";
 import { MainContainer, BackButton } from "./";
 
-interface T{
-  back_handler: () => void
-}
 
-export const NotFound: React.FC <T> = props => (
+export const NotFound = () => (
   <MainContainer header="Page Not Found">
-    <BackButton back_handler={props.back_handler} />
+    <BackButton />
   </MainContainer>
 );

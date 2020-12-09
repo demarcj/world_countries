@@ -6,8 +6,8 @@ import * as actions from "../../store/actions";
 
 export const Quiz = () => {
   const counter = useSelector((state: any) => state.counter, shallowEqual);
+
   const dispatch = useDispatch();
-  
   const change = () => dispatch(actions.increase());
 
   return(

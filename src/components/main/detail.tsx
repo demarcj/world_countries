@@ -1,15 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector, shallowEqual } from "react-redux";
 import { BackButton, MainContainer } from "./index"
 
-interface T{
-  flag: any,
-  abbrev_list: object[],
-  back_handler: () => void
-}
+export const Detail = () => {
+  const flag = useSelector((state: any) => state.flags, shallowEqual);
+  const abbrev_list = useSelector((state: any) => state.abbrev_list, shallowEqual); 
 
-export const Detail: React.FC <T> = props => {
-  const { flag, abbrev_list, back_handler } = props;
   const domain_length = flag.topLevelDomain.length;
   const currency_length = flag.currencies.length;
   const lang_length = flag.languages.length;
@@ -17,7 +14,7 @@ export const Detail: React.FC <T> = props => {
   return (
     <MainContainer header={flag.name} >
       <section className="detail_page">
-        <BackButton back_handler={back_handler} />
+        <BackButton />
         <div className="detail_page_content">
           <div className="detail_page_container detail_image_container">
             <img src={flag.flag} className="flag_detail_image" alt={"The flag of " + flag.name} /> 

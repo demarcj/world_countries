@@ -13,6 +13,7 @@ Can on any country and it'll take you to a detail page where you can get more in
 https://world-countries-games.herokuapp.com/
 
 If looking at between 12am - 6am it not displaying there since you can also take a look here
+
 https://demarcj.github.io/world_countries/
 
 ## To-Do-List & what to expect next
@@ -29,3 +30,4 @@ https://demarcj.github.io/world_countries/
 * Redux
 * TypeScript
 * Webpack
+* Sass
