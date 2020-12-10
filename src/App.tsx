@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch, shallowEqual } from "react-redux";
+import { useDispatch } from "react-redux";
 import * as actions from "./store/actions";
 import { Header } from "./components/header";
 import { Main } from "./components/main"

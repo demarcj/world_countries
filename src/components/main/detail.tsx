@@ -3,18 +3,27 @@ import { Link } from "react-router-dom";
 import { useSelector, shallowEqual } from "react-redux";
 import { BackButton, MainContainer } from "./index"
 
-export const Detail = () => {
-  const flag = useSelector((state: any) => state.flags, shallowEqual);
+interface T{
+  location: any,
+  history: any
+}
+
+export const Detail: React.FC <T> = props => {
+  const flags = useSelector((state: any) => state.flags, shallowEqual);
   const abbrev_list = useSelector((state: any) => state.abbrev_list, shallowEqual); 
+  const abbrev = props.location.pathname;
+  const get_abbrev = abbrev.substring((abbrev.length - 3), abbrev.length);
+  const filter_flag = flags.filter((item:any) => item.alpha3Code === get_abbrev)
+  const flag = filter_flag[0];
 
   const domain_length = flag.topLevelDomain.length;
   const currency_length = flag.currencies.length;
   const lang_length = flag.languages.length;
-
+  
   return (
     <MainContainer header={flag.name} >
       <section className="detail_page">
-        <BackButton />
+        <BackButton backer={props.history.goBack}/>
         <div className="detail_page_content">
           <div className="detail_page_container detail_image_container">
             <img src={flag.flag} className="flag_detail_image" alt={"The flag of " + flag.name} /> 

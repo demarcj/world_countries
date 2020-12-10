@@ -13,8 +13,14 @@ export const Quiz = () => {
   return(
     <MainContainer header="It's game time" >
       <section className="quiz">
-        <h2>Quiz Num {counter}</h2>
-        <button onClick={change}>Click Here</button>
+        <h2 className="placeholder">Coming Soon... Under Construction</h2>
+        {window.location.hostname === "localhost" ? (
+            <>
+              <h3>Quiz Num {counter}</h3>
+              <button onClick={change}>Click Here</button>
+            </>
+          ) : ""
+        }
       </section>
     </MainContainer >
   )

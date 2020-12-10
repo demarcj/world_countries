@@ -13,7 +13,7 @@ export const Header: React.FC<T> = props => {
   return(
     <header>
       <div className="header container">  
-        {window.location.hostname === "localhost" ? <Nav /> : <nav></nav>}
+        <Nav />
         <div className="right_header">
           <div className="mobile_menu">&#9776;</div>
           <p 

@@ -69,6 +69,10 @@
 	right: 10px;
 }
 
+.placeholder{
+	color: var(--font_color)
+}
+
 .flag_container {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -115,6 +119,8 @@
 	margin-bottom: 45px;
 	box-shadow:var(--item_shadow);
 	margin-right: 30px;
+	cursor: pointer;
+	border: 0;
 }
 
 .border{

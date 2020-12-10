@@ -2,7 +2,7 @@
 
 You can get the stats of all the world's country
 
-## Version 0.4.10
+## Version 0.4.11
 
 Can filter the country list by either or both text and by dropdown
 
@@ -10,9 +10,11 @@ Can on any country and it'll take you to a detail page where you can get more in
 
 ## Where can I see the current version of World Countries
 
+You can see the current version of the app here:
+
 https://world-countries-games.herokuapp.com/
 
-If looking at between 12am - 6am it not displaying there since you can also take a look here
+If looking at between 12am - 6am it not displaying there since you can also take a look here:
 
 https://demarcj.github.io/world_countries/
 
@@ -22,6 +24,7 @@ https://demarcj.github.io/world_countries/
 - [ ] Make a quiz feature
 - [ ] Add a login option
 - [ ] Add a favorite countries option
+- [ ] Connect the app to a database
 - [x] Add social / contact links section in the footer
 - [x] Add Redux
 
