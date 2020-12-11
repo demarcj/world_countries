@@ -6,7 +6,8 @@ export const inital_state = {
   search: "",
   option: "",
   const_flags: [],
-  abbrev_list: [{}]
+  abbrev_list: [{}],
+  random_number: 0
 }
 
 export const reducer = (state: any = inital_state, action: any) => {
