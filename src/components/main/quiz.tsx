@@ -42,24 +42,18 @@ export const Quiz = () => {
         <h2 className="placeholder">Name this Country {counter % 10}</h2>
         <h2 className="placeholder">{flag === undefined ? "" : flag.name}</h2>
         <h2 className="placeholder">{correct}</h2>
-
-        {window.location.hostname === "localhost" ? (
-            <>
-              <img className="quiz_image" src={(flag === undefined ? "" : flag.flag)} alt={"The flag of " + (flag === undefined ? "" : flag.name)}/>
-              <form>
-                <input 
-                  type="search" 
-                  name="search"
-                  id="search" 
-                  className="search"
-                  placeholder="Name this Country"
-                  onChange={search_handler}
-                />
-                <button className="quiz_button" onClick={get_next_item}>Submit</button>
-              </form>
-            </>
-          ) : ""
-        }
+        <img className="quiz_image" src={(flag === undefined ? "" : flag.flag)} alt={"The flag of " + (flag === undefined ? "" : flag.name)}/>
+        <form>
+          <input 
+            type="search" 
+            name="search"
+            id="search" 
+            className="search"
+            placeholder="Name this Country"
+            onChange={search_handler}
+          />
+          <button className="quiz_button" onClick={get_next_item}>Submit</button>
+        </form>
       </section>
     </MainContainer >
   )
