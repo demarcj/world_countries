@@ -1,8 +1,9 @@
 import * as action from './action'
 
-export const increase = () => {
+export const increase = (value: number) => {
   return {
-    type: action.increase
+    type: action.increase,
+    val: value
   }
 }
 
