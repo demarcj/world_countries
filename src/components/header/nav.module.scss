@@ -1,0 +1,16 @@
+.nav_item{ display: inline-block; }
+.nav_links{
+  color: var(--font_color);
+  text-decoration: none;
+  font-weight: 700;
+  margin: 0 10px;
+  font-size: 22px;
+}
+.nav_item:first-of-type>.nav_links{ margin-left: 0; }
+.nav_links.active{ color:var(--active_link); }
+
+@media screen and (max-width:991px) {
+  .nav{ display: none; }
+  .nav_item{ display: block; }
+  .nav_links{ margin: 0; }
+}

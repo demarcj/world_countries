@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav } from "./index";
-import "./header.scss";
+import styles from "./header.module.scss";
 
 interface T{
   color_mode: string,
@@ -12,10 +12,10 @@ export const Header: React.FC<T> = props => {
 
   return(
     <header>
-      <div className="header container">  
+      <div className={`${styles.header} container`}>  
         <Nav />
-        <div className="right_header">
-          <div className="mobile_menu">&#9776;</div>
+        <div className={styles.right_header}>
+          <div className={styles.mobile_menu}>&#9776;</div>
           <p 
             className="color_mode"
             onClick={color_mode_handler}

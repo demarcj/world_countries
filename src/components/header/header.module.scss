@@ -1,0 +1,24 @@
+.header{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.mobile_menu{
+  color: var(--font_color);
+  font-size: 30px;
+  display: none;
+  text-align: left;
+}
+.color_mode{
+  cursor: pointer;
+  display: inline-block;
+}
+.right_header{ text-align: right; }
+
+@media screen and (max-width:991px) {
+  .mobile_menu{ display: block; }
+  .header{ grid-template-columns: 1fr; }
+  .right_header{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
