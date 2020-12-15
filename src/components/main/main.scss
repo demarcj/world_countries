@@ -13,17 +13,7 @@
 	width: 50%;
 }
 
-.search {
-	background: var(--background_color);
-	color:var(--font_color);
-	border: none;
-	padding: 15px;
-	font-size: 18px;
-	border-radius: 3px;
-	margin-bottom: 15px;
-	width: 75%;
-	box-shadow:var(--item_shadow);
-}
+.search { width: 75%; }
 
 .continents_container{
 	text-align: right;

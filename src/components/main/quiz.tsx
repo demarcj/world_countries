@@ -13,7 +13,7 @@ export const Quiz = () => {
 
   const [country_name, set_country_name] = useState("");
   const [correct, set_correct] = useState("");
-  const [show_quiz, set_show_quiz] = useState(false);
+  const [show_quiz, set_show_quiz] = useState(true);
 
   const flag: any = const_flags[random_number];
 
@@ -44,7 +44,7 @@ export const Quiz = () => {
     <MainContainer header="It's game time" >
       <section className="quiz">
         {
-          show_quiz ? <p> Start Game <button onClick={start_handler}>Start</button></p> : (
+          show_quiz ? <p>Start Game <button onClick={start_handler}>Start</button></p> : (
             <>
               <h2 className="placeholder">Coming Soon... Under Construction</h2>
               <h2 className="placeholder">Name this Country {counter % 10}</h2>
