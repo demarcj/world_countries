@@ -4,7 +4,6 @@
   padding: 0;
   transition: all .3s ease-in-out;
 }
-
 :root{
   --background_color:#2b3743;
   --background_color2: #202d36;
@@ -16,7 +15,7 @@
   --active_link:rgb(250, 205, 108);
   // font-size: 10px;
 }
-
+.root{ color:var(--font_color); }
 .light_mode{
   --background_color: white;
   --background_color2: #fafafa;
@@ -26,29 +25,19 @@
   --item_shadow:0px 0px 5px 0px rgba(0,0,0,0.6);
   --active_link:rgb(13, 0, 192);
 }
-
 #color_mode{
   display: grid;
   grid-template-rows: auto 1fr auto;
   height: 100vh;
   text-transform: capitalize;
 }
-
-footer {
-  margin-top: auto;
-}
-
+footer { margin-top: auto; }
 p{
-  color:var(--font_color);
-  font-weight:700;
   font-size: 24px;
+  padding-bottom: 15px;
 }
-
-label{
-  color: var(--font_color);
-  display: block;
-}
-
+a{ color:var(--font_color); }
+label{ display: block; }
 input{
   background: var(--background_color);
 	color:var(--font_color);
@@ -60,32 +49,37 @@ input{
 	box-shadow:var(--item_shadow);
   display: block;
 }
-
-button{
+button, a{
   display: block;
   padding: 5px;
+  background:var(--background_color);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 15px;
+  display: inline-block;
+  margin-bottom: 45px;
+  box-shadow:var(--item_shadow);
+  color:var(--font_color);
+  cursor: pointer;
+  border: 0;
 }
-
 header{
   background: var(--background_color);
   padding: var(--padding) 0;
   box-shadow:var(--header_shadow);
   position: relative;
 }
-
 main{
   background:var(--background_color2);
   padding: var(--padding) 0;
-  flex: 1;
 }
-
 .container{
   width: 1600px;
   margin: 0 auto;
   max-width: 100%;
   padding: 0 15px;
 }
-
 footer{
   background: var(--background_color);
   padding: var(--padding) 0;

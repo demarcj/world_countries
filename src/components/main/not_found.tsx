@@ -5,8 +5,8 @@ interface T{
   history: any
 }
 
-export const NotFound: React.FC <T> = props => (
+export const NotFound: React.FC <T> = ({history}) => (
   <MainContainer header="Page Not Found">
-    <BackButton backer={props.history.goBack}/>
+    <BackButton backer={history.goBack}/>
   </MainContainer>
 );

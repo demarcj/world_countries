@@ -8,10 +8,10 @@ interface T{
   history: any
 }
 
-export const Detail: React.FC <T> = props => {
+export const Detail: React.FC <T> = ({location, history}) => {
   const flags = useSelector((state: any) => state.flags, shallowEqual);
   const abbrev_list = useSelector((state: any) => state.abbrev_list, shallowEqual); 
-  const abbrev = props.location.pathname;
+  const abbrev = location.pathname;
   const get_abbrev = abbrev.substring((abbrev.length - 3), abbrev.length);
   const filter_flag = flags.filter((item:any) => item.alpha3Code === get_abbrev)
   const flag = filter_flag[0];
@@ -23,7 +23,7 @@ export const Detail: React.FC <T> = props => {
   return (
     <MainContainer header={flag.name} >
       <section className="detail_page">
-        <BackButton backer={props.history.goBack}/>
+        <BackButton backer={history.goBack}/>
         <div className="detail_page_content">
           <div className="detail_page_container detail_image_container">
             <img src={flag.flag} className="flag_detail_image" alt={"The flag of " + flag.name} /> 
@@ -42,7 +42,19 @@ export const Detail: React.FC <T> = props => {
               <p className="flag_detail languages">Languages: {flag.languages.map((lang:any, i:number) => lang.name + (lang_length === (i + 1) ? "" : ", "))}</p>
             </div>
             <p className="flag_detail border_header">Bordering Countries: {flag.borders.length === 0 ? "None" : ""}</p>
-            {abbrev_list.map((abbrev:any, i:number) => flag.borders.includes(abbrev.abbrev) ? <Link className="border block_text" to={"/world_countries/" + abbrev.abbrev} key={"border_" + i}>{abbrev.name}</Link> : "")}
+            {
+              abbrev_list.map((abbrev:any, i:number) => flag.borders.includes(abbrev.abbrev) ? (
+                <Link 
+                  className="border block_text" 
+                  to={"/world_countries/" + abbrev.abbrev} 
+                  key={"border_" + i}
+                >
+                  {abbrev.name}
+                </Link>
+              ) : 
+              ""
+              )
+            }
           </div>
         </div>
       </section>

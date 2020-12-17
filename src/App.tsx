@@ -45,7 +45,7 @@ const App = () => {
   return (
     <div 
       id="color_mode" 
-      className={color_mode === "light_mode" ? "light_mode" : "dark_mode"}
+      className={`${color_mode === "light_mode" ? "light_mode" : "dark_mode"} root`}
     >
       <Header 
         color_mode={color_mode === "light_mode" ? "Dark Mode" : "Light Mode"}
