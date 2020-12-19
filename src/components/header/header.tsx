@@ -17,7 +17,7 @@ export const Header: React.FC<T> = props => {
         <div className={styles.right_header}>
           <div className={styles.mobile_menu}>&#9776;</div>
           <p 
-            className="color_mode"
+            className={styles.color_mode}
             onClick={color_mode_handler}
           >
             {color_mode.replaceAll("_", " ")}
