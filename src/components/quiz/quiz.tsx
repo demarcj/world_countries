@@ -47,16 +47,16 @@ export const Quiz = () => {
         {show_quiz ? (
           <>
             <p>Start Game</p>
-            <button onClick={start_handler}>Start</button>
+            <button className={styles.start} onClick={start_handler}>Start</button>
+            <button>Different Game</button>
           </>
         ) : (
           <>
-            <h2>Coming Soon... Under Construction</h2>
-            <h2>Name this Country {counter % 10}</h2>
-            <h2> {flag === undefined ? "" : flag.name} </h2>
+            <h2>Name this Country</h2>
+            <h2>{flag === undefined ? "" : flag.name}</h2>
             <h2>{correct}</h2>
             <img
-              className="quiz_image"
+              className={styles.quiz_image}
               src={flag === undefined ? "" : flag.flag}
               alt={"The flag of " + (flag === undefined ? "" : flag.name)}
             />

@@ -21,8 +21,6 @@
   padding: 0;
 }
 .nav_item:first-of-type>.nav_links{ margin-left: 0; }
-.nav_links.active{ color:var(--active_link); }
-
 @media screen and (max-width:991px) {
   .nav{ display: none; }
   .nav_item{ display: block; }
