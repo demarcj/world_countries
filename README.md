@@ -8,7 +8,7 @@ Can filter the country list by either or both text and by dropdown
 
 Can on any country and it'll take you to a detail page where you can get more information
 
-## Where can I see the current version of World Countries
+## Where can I see the current version of World Countries.
 
 You can see the current version of the app here:
 
