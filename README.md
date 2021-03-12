@@ -1,6 +1,6 @@
 # World Countries
 
-You can get the stats of all the world's country
+You can get the stats of all the world's countries and test your knowledge on those countries
 
 ## Version 0.5.5
 
@@ -12,21 +12,17 @@ Can on any country and it'll take you to a detail page where you can get more in
 
 You can see the current version of the app here:
 
-https://world-countries-games.herokuapp.com/
-
-If looking at between 12am - 6am it not displaying there since you can also take a look here:
-
 https://demarcj.github.io/world_countries/
 
-## To-Do-List & what to expect next
-- [x] Create a Light Mode option for the app. I'd created the site in dark mode design first because I like dark mode better :P 
-- [x] The fix the issue where the dropdown doesn't function on mobile devices
+## To-Do-List & what to expect next for March
 - [ ] Make a quiz feature
 - [ ] Add a login option
 - [ ] Add a favorite countries option
+- [ ] Make a hamburger menu for the mobile
 - [ ] Connect the app to a database
-- [x] Add social / contact links section in the footer
-- [x] Add Redux
+- [ ] Check with lighthouse to fix the possible performance
+- [ ] Check with lighthouse to add PWA 
+- [ ] Add AWS Logging in to the AWS
 
 ## Technology used
 * React

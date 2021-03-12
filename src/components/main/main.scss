@@ -85,11 +85,11 @@
 		width: 100%;
 	}
 	.filter_container{ width: 100%; }
-	.filter_container.continents_container{
-		width: auto;
+	.continents_container{
 		display: inline-block;
+		text-align: left;
 	}
-	.continents_container{ text-align: left; }
+	.continents{ width: 100%; }
 	.border {
 		display: block;
 		text-align: center;
@@ -97,6 +97,6 @@
 	}
 }
 
-@media screen and (max-width:468px) {
+@media screen and (max-width:768px) {
   .flag_container { grid-template-columns: 1fr; }
 }

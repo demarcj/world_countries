@@ -19,10 +19,10 @@ export const Main: React.FC<T> = ({const_flags}) => (
           component={Detail}
         />
       ))}
-      <Route path="/world_countries">
+      {/* <Route path="/world_countries">
         <Redirect from="/world_countries" to="/" />
-      </Route>
-      <Route path="/" component={Home} exact />
+      </Route> */}
+      <Route path="/world_countries" component={Home} exact />
       <Route component={NotFound} />
     </Switch>
   </main>
