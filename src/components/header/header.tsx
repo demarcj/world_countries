@@ -9,7 +9,7 @@ interface T{
 
 export const Header: React.FC<T> = props => {
   const {color_mode, color_mode_handler} = props;
-
+  
   return(
     <header>
       <div className={`${styles.header} container`}>  

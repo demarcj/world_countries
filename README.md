@@ -20,8 +20,8 @@ https://demarcj.github.io/world_countries/
 - [ ] Add a favorite countries option
 - [ ] Make a hamburger menu for the mobile
 - [ ] Connect the app to a database
-- [ ] Check with lighthouse to fix the possible performance
-- [ ] Check with lighthouse to add PWA 
+- [x] Check with lighthouse to fix the possible performance
+- [x] Check with lighthouse to add PWA 
 - [ ] Add AWS Logging in to the AWS
 
 ## Technology used
@@ -29,4 +29,5 @@ https://demarcj.github.io/world_countries/
 * Redux
 * TypeScript
 * Webpack
-* Sass Modules
+* Sass / SCSS Modules
+* Progressive Web App [PWA]

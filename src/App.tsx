@@ -34,6 +34,7 @@ const App = () => {
     get_flags();
   }, []);
 
+
   const [color_mode, set_color_mode] = useState(localStorage.getItem("color_mode"));
   
   const color_mode_handler = () => {

@@ -58,6 +58,10 @@ input{
   width: 100%;
   max-width: 100%;
 }
+input[type="radio"]{
+  display: inline-block;
+  width: auto;
+}
 select {
 	padding: 15px;
   background: var(--background_color);
