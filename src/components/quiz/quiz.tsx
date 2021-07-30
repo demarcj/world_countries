@@ -54,7 +54,7 @@ export const Quiz = () => {
     document.querySelectorAll('input[name="name"]').forEach((item: any) => {
       item.checked = false;
     })
-
+    console.log(correct, flag.name);
   };
 
   React.useEffect(() => {
@@ -91,14 +91,14 @@ export const Quiz = () => {
               src={flag === undefined ? "" : flag.flag}
               alt={"The flag of " + (flag === undefined ? "" : flag.name)}
             />
-            <form id="country_name">
+            <form id="country_name" className={styles.country_name}>
               {new_sort.map((item:any, i:any) => (
                 <>
-                  <label htmlFor={(item === `test5` ? flag.name : item)}>
+                  <label htmlFor={(item === `test5` ? flag.name : item).toLowerCase().replaceAll(" ", "-")}>
                     <input 
                       type="radio" 
                       name="name"
-                      id={(item === `test5` ? flag.name : item)} 
+                      id={(item === `test5` ? flag.name : item).toLowerCase().replaceAll(" ", "-")} 
                       key={"test" + i}
                       onChange={search_handler}
                       value={(item === `test5` ? flag.name : item)}

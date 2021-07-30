@@ -3,7 +3,10 @@
 	height: 400px;
 	object-fit: cover;
 	margin-bottom: 30px;
+	display: block;
 }
 .quiz_button{ display: block; }
 .search{ width: 75%; }
 .start{margin-right: 30px;}
+.country_name{display: inline-block;}
+form label{cursor: pointer;}

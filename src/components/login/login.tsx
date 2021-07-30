@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MainContainer } from "../main/main_container";
+import { Link } from "react-router-dom";
 import styles from "./login.module.scss";
 
 export const Login = () => {
@@ -7,20 +8,18 @@ export const Login = () => {
   const [info, set_info] = useState("");
   
   const handle_submit = async () => {
-    const login = (document.querySelector("#username") as HTMLInputElement).value;
+    const login = (document.querySelector("#username") as HTMLInputElement).value.toLowerCase();
     const password = (document.querySelector("#password") as HTMLInputElement).value;
     try {
-      const get_data = await fetch(`https://world-countries-aad9f-default-rtdb.firebaseio.com/login.json`, {
-        method: `POST`,
-        body: JSON.stringify({
-          login: login,
-          password: password
-        })
-      });
-      const data = await get_data.json();
-      set_info(data.name);
+      const get_credential = await fetch(`https://world-countries-aad9f-default-rtdb.firebaseio.com/${login}.json`);
+      const json_credential = await get_credential.json();
+      const credential: any = Object.values(json_credential)[0];
+      const is_login = credential.password === password;
+      if(is_login){
+        set_info(`Hello ${credential.login}`)
+      }
     } catch(e) {
-      set_info(`Your login did not go through`);
+      set_info(`Either you're login or password is not correct`);
     }
   }
 
@@ -41,6 +40,9 @@ export const Login = () => {
             Login
           </button>
         </form>
+        <p className={styles.signup}>
+          Don't have a login? <Link className={styles.signup_link} to="/signup">Sign Up</Link>
+        </p>
       </section>
     </MainContainer>
   )

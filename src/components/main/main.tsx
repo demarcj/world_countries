@@ -1,8 +1,8 @@
 import React from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { Home, Detail, NotFound } from "./";
 import { Quiz } from "../quiz";
-import { Login } from "../login";
+import { Login, Signup } from "../login";
 import "./main.scss";
 
 interface T { const_flags: any; }
@@ -12,6 +12,7 @@ export const Main: React.FC<T> = ({const_flags}) => (
     <Switch>
       <Route path="/quiz" component={Quiz} />
       <Route path="/login" component={Login} />
+      <Route path="/signup" component={Signup} />
       {const_flags.map((flag: any, i: number) => (
         <Route
           key={"route_" + i}
